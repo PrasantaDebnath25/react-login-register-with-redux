@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom'
 import Login from '../Login'
-import Counter from '../Pages/Counter'
 import './HeaderStyle.css'
 import imgs from './bar.png'
 import { useState, useEffect } from 'react'
