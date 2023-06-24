@@ -19,25 +19,25 @@ function Counter(props) {
 	//const initialValue = 0
 	//const [count, setCount] = useState(initialValue)
 	const data = store.getState();
-	
+
 	const change = () => {
-		localStorage.setItem("status",false)
+		localStorage.setItem("status", false)
 		history.push("/");
 	}
 	return (
 		<AuthLayout>
-		<center>
+			<center>
 
-			Count: {( props.count )}
-            <p>
-            <img src={like} alt="image" height="50px" onClick={()=> {props.changeAdd(props.count)}} />
-			{/* <img src={like} alt="image" height="50px" onClick={()=> dispatch(increment())} /> */}
-            <img src={dislike} alt="image" height="50px" onClick={ () => props.changeDec(props.count)} />
-			{/* { localStorage.setItem("counterValue", parseInt(props.count)) } */}
-			
-			</p>
-			<Button onClick={change}>Logout</Button>
-		</center>
+				Count: {(props.count)}
+				<p>
+					<img src={like} alt="image" height="50px" onClick={() => { props.changeAdd(props.count) }} />
+					{/* <img src={like} alt="image" height="50px" onClick={()=> dispatch(increment())} /> */}
+					<img src={dislike} alt="image" height="50px" onClick={() => props.changeDec(props.count)} />
+					{/* { localStorage.setItem("counterValue", parseInt(props.count)) } */}
+
+				</p>
+				<Button onClick={change}>Logout</Button>
+			</center>
 		</AuthLayout>
 	)
 }
@@ -50,9 +50,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		changeAdd: (count) => {dispatch({type: "Increment", payload: 1})},
-		changeDec: (count) => {dispatch({type: "Decrement", payload: 1})}
+		changeAdd: (count) => { dispatch({ type: "Increment", payload: 1 }) },
+		changeDec: (count) => { dispatch({ type: "Decrement", payload: 1 }) }
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
