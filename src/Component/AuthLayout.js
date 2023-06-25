@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
 class AuthLayout extends Component {
+
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -15,7 +17,6 @@ class AuthLayout extends Component {
         //         isloggedIn : true
         //     })
         //     //localStorage.setItem("status", false);
-
         // }
     }
     render() {
